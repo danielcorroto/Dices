@@ -4,7 +4,15 @@ const ids = ["qtyd4", "qtyd6", "qtyd8", "qtyd10", "qtyd00", "qtyd12", "qtyd20", 
 var dices = [0,0,0,0,0,0,0,0]; // 4, 6, 8, 10, 00, 12, 20, 100
 
 function printDiceQty(index) {
-	$("#"+ids[index]).text(dices[index]);
+	var span = $("#"+ids[index]);
+	span.text(dices[index]);
+	if (dices[index] == 0) {
+		span.removeClass("label-success");
+		span.addClass("label-default");
+	} else {
+		span.removeClass("label-default");
+		span.addClass("label-success");
+	}
 }
 
 function clearDices() {
@@ -38,14 +46,19 @@ function addDice(add, dice) {
 
 function rollDices() {
 	var res = [];
+	var total = 0;
 	for (var i=0; i<dices.length; i++) {
 		for (var j=0; j<dices[i]; j++) {
 			var value = Math.floor(Math.random() * values[i]);
 			if (i==4) { value *= 10; }
 			else { value += 1; }
 			res.push(value);
+			total += value;
 		}
 	}
-	$("#result").text(res);
+	if (res.length > 0) {
+		$("#result").text("Roll " + res);
+		$("#total").text("Total: " + total);
+	}
 }
 

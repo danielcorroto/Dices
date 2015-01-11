@@ -2,10 +2,11 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dice roller</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/ico" href="favicon.ico">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
@@ -23,47 +24,52 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-1">D4 (<span id="qtyd4" class="label label-default">0</span>)</div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d4')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d4')"><span class="glyphicon
+			<div class="col-md-1 col-xs-2"><img src="img/d4.png" width="30" height="30"> D4 <span id="qtyd4" class="label label-default">0</span></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d4')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d4')"><span class="glyphicon
 glyphicon-plus" aria-hidden="true"></span></button></div>
  
-			<div class="col-md-1">D6 (<span id="qtyd6" class="label label-default">0</span>)</div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d6')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d6')"><span class="glyphicon
+			<div class="col-md-1 col-xs-2"><img src="img/d6.png" width="30" height="30"> D6 <span id="qtyd6" class="label label-default">0</span></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d6')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d6')"><span class="glyphicon
 glyphicon-plus" aria-hidden="true"></span></button></div>
 			
-			<div class="col-md-1">D8 (<span id="qtyd8" class="label label-default">0</span>)</div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d8')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d8')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-2"><img src="img/d8.png" width="30" height="30"> D8 <span id="qtyd8" class="label label-default">0</span></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d8')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d8')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
 			
-			<div class="col-md-1">D10 (<span id="qtyd10" class="label label-default">0</span>)</div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d10')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d10')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-2"><img src="img/d10.png" width="30" height="30"> D10 <span id="qtyd10" class="label label-default">0</span></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d10')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d10')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
 		</div>
 		<div class="row top-buffer">
-			<div class="col-md-1">D00 (<span id="qtyd00" class="label label-default">0</span>)</div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d00')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d00')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-2"><img src="img/d00.png" width="30" height="30"> D00 <span id="qtyd00" class="label label-default">0</span></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d00')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d00')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
 			
-			<div class="col-md-1">D12 (<span id="qtyd12" class="label label-default">0</span>)</div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d12')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d12')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-2"><img src="img/d12.png" width="30" height="30"> D12 <span id="qtyd12" class="label label-default">0</span></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d12')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d12')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
 			
-			<div class="col-md-1">D20 (<span id="qtyd20" class="label label-default">0</span>)</div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d20')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d20')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-2"><img src="img/d20.png" width="30" height="30"> D20 <span id="qtyd20" class="label label-default">0</span></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d20')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d20')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
 			
-			<div class="col-md-1">D100 (<span id="qtyd100" class="label label-default">0</span>)</div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d100')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d100')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-2"><img src="img/d00.png" width="30" height="30"> D100 <span id="qtyd100" class="label label-default">0</span></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d100')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d100')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
 		</div>
 		<div class="row top-buffer">
-			<div class="col-md-6"><button type="button" class="btn btn-default btn-lg" onclick="clearDices()">Clear</button></div>
-			<div class="col-md-6"><button type="button" class="btn btn-default btn-lg" onclick="rollDices()">Roll</button></div>
+			<div class="col-md-6 col-xs-6"><button type="button" class="btn btn-danger btn-lg btn-block" onclick="clearDices()">Clear</button></div>
+			<div class="col-md-6 col-xs-6"><button type="button" class="btn btn-primary btn-lg btn-block" onclick="rollDices()">Roll</button></div>
 		</div>
+
 		<div class="row top-buffer">
 			<div class="col-md-12"><span id="result"></span></div>
+		</div>
+
+		<div class="row top-buffer">
+			<div class="col-md-12"><span id="total" class="label label-info"></span></div>
 		</div>
 	</div>
 

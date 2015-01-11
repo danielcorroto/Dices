@@ -1,64 +1,48 @@
 <!DOCTYPE html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Dice roller</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/ico" href="favicon.ico">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Dice roller</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/ico" href="favicon.ico">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<style>
+			body {
+				padding-top: 50px;
+				padding-bottom: 20px;
+			}
+		</style>
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/main.css">
 
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    </head>
-    <body>
+		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	</head>
+	<body>
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-1 col-xs-2"><img src="img/d4.png" width="30" height="30"> D4 <span id="qtyd4" class="label label-default">0</span></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d4')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d4')"><span class="glyphicon
-glyphicon-plus" aria-hidden="true"></span></button></div>
- 
-			<div class="col-md-1 col-xs-2"><img src="img/d6.png" width="30" height="30"> D6 <span id="qtyd6" class="label label-default">0</span></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d6')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d6')"><span class="glyphicon
-glyphicon-plus" aria-hidden="true"></span></button></div>
-			
-			<div class="col-md-1 col-xs-2"><img src="img/d8.png" width="30" height="30"> D8 <span id="qtyd8" class="label label-default">0</span></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d8')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d8')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
-			
-			<div class="col-md-1 col-xs-2"><img src="img/d10.png" width="30" height="30"> D10 <span id="qtyd10" class="label label-default">0</span></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d10')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d10')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-3"><img src="img/d4.png" width="60" height="60" onclick="selectDice('d4')"><br> D4 </div>
+			<div class="col-md-1 col-xs-3"><img src="img/d6.png" width="60" height="60" onclick="selectDice('d6')"><br> D6 </div>
+			<div class="col-md-1 col-xs-3"><img src="img/d8.png" width="60" height="60" onclick="selectDice('d8')"><br> D8 </div>
+			<div class="col-md-1 col-xs-3"><img src="img/d10.png" width="60" height="60" onclick="selectDice('d10')"><br> D10 </div>
 		</div>
 		<div class="row top-buffer">
-			<div class="col-md-1 col-xs-2"><img src="img/d00.png" width="30" height="30"> D00 <span id="qtyd00" class="label label-default">0</span></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d00')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d00')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
-			
-			<div class="col-md-1 col-xs-2"><img src="img/d12.png" width="30" height="30"> D12 <span id="qtyd12" class="label label-default">0</span></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d12')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d12')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
-			
-			<div class="col-md-1 col-xs-2"><img src="img/d20.png" width="30" height="30"> D20 <span id="qtyd20" class="label label-default">0</span></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d20')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d20')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
-			
-			<div class="col-md-1 col-xs-2"><img src="img/d00.png" width="30" height="30"> D100 <span id="qtyd100" class="label label-default">0</span></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(false,'d100')"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(true,'d100')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
+			<div class="col-md-1 col-xs-3"><img src="img/d12.png" width="60" height="60" onclick="selectDice('d12')"><br> D12 </div>
+			<div class="col-md-1 col-xs-3"><img src="img/d20.png" width="60" height="60" onclick="selectDice('d20')"><br> D20 </div>
+			<div class="col-md-1 col-xs-3"><img src="img/d00.png" width="60" height="60" onclick="selectDice('d100')"><br> D100 </div>
+			<div class="col-md-1 col-xs-3"><img src="img/d00.png" width="60" height="60" onclick="selectDice('d100')"><br> D100 </div>
 		</div>
+
+		<div class="row top-buffer">
+			<div class="col-xs-3"><img src="img/d6.png" width="60" height="60" id="selectedDice"></div>
+			<div class="col-xs-1"><span id="quantity" class="label label-default">0</span></div>
+			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(-1)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
+			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(1)"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
+		</div>
+
 		<div class="row top-buffer">
 			<div class="col-md-6 col-xs-6"><button type="button" class="btn btn-danger btn-lg btn-block" onclick="clearDices()">Clear</button></div>
 			<div class="col-md-6 col-xs-6"><button type="button" class="btn btn-primary btn-lg btn-block" onclick="rollDices()">Roll</button></div>
@@ -74,11 +58,11 @@ glyphicon-plus" aria-hidden="true"></span></button></div>
 	</div>
 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
-        <script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/vendor/bootstrap.min.js"></script>
 
-        <script src="js/main.js"></script>
-    </body>
+		<script src="js/main.js"></script>
+	</body>
 </html>

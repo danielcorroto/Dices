@@ -29,6 +29,8 @@ function addDice(value) {
 function clearDices() {
 	quantity = 0;
 	printDiceQty();
+	$("#result").text("");
+	$("#total").text("");
 }
 
 function rollDices() {

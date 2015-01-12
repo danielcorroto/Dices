@@ -39,6 +39,7 @@ function rollDices() {
 			if (value == 0) { res.push("CARA"); }
 			else { res.push("CRUZ"); }
 		}
+	$("#total").text("");
 	} else {
 		var total = 0;
 		for (var i=0; i<quantity; i++) {

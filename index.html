@@ -24,23 +24,25 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-1 col-xs-3"><img src="img/d4.png" width="60" height="60" onclick="selectDice('d4')"><br> D4 </div>
-			<div class="col-md-1 col-xs-3"><img src="img/d6.png" width="60" height="60" onclick="selectDice('d6')"><br> D6 </div>
-			<div class="col-md-1 col-xs-3"><img src="img/d8.png" width="60" height="60" onclick="selectDice('d8')"><br> D8 </div>
-			<div class="col-md-1 col-xs-3"><img src="img/d10.png" width="60" height="60" onclick="selectDice('d10')"><br> D10 </div>
+			<div class="col-md-1 col-xs-3"><img src="img/d2.png" width="60" height="60" onclick="selectDice(2)"><br> D2 </div>
+			<div class="col-md-1 col-xs-3"><img src="img/d4.png" width="60" height="60" onclick="selectDice(4)"><br> D4 </div>
+			<div class="col-md-1 col-xs-3"><img src="img/d6.png" width="60" height="60" onclick="selectDice(6)"><br> D6 </div>
+			<div class="col-md-1 col-xs-3"><img src="img/d8.png" width="60" height="60" onclick="selectDice(8)"><br> D8 </div>
 		</div>
 		<div class="row top-buffer">
-			<div class="col-md-1 col-xs-3"><img src="img/d12.png" width="60" height="60" onclick="selectDice('d12')"><br> D12 </div>
-			<div class="col-md-1 col-xs-3"><img src="img/d20.png" width="60" height="60" onclick="selectDice('d20')"><br> D20 </div>
-			<div class="col-md-1 col-xs-3"><img src="img/d00.png" width="60" height="60" onclick="selectDice('d100')"><br> D100 </div>
-			<div class="col-md-1 col-xs-3"><img src="img/d00.png" width="60" height="60" onclick="selectDice('d100')"><br> D100 </div>
+			<div class="col-md-1 col-xs-3"><img src="img/d10.png" width="60" height="60" onclick="selectDice(10)"><br> D10 </div>
+			<div class="col-md-1 col-xs-3"><img src="img/d12.png" width="60" height="60" onclick="selectDice(12)"><br> D12 </div>
+			<div class="col-md-1 col-xs-3"><img src="img/d20.png" width="60" height="60" onclick="selectDice(20)"><br> D20 </div>
+			<div class="col-md-1 col-xs-3"><img src="img/d100.png" width="60" height="60" onclick="selectDice(100)"><br> D100 </div>
 		</div>
 
 		<div class="row top-buffer">
-			<div class="col-xs-3"><img src="img/d6.png" width="60" height="60" id="selectedDice"></div>
+			<div class="col-xs-2"><img src="img/d6.png" width="60" height="60" id="selectedDice"></div>
 			<div class="col-xs-1"><span id="quantity" class="label label-default">0</span></div>
-			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(-1)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></div>
-			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(1)"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
+			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(-5)">-5</button></div>
+			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(-1)">-1</button></div>
+			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(1)">+1</button></div>
+			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(5)">+5</button></div>
 		</div>
 
 		<div class="row top-buffer">

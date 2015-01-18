@@ -24,6 +24,24 @@
 
 	<div class="container">
 		<div class="row">
+			<div class="col-xs-9"><span id="result"></span></div>
+			<div class="col-xs-3"><button type="button" class="btn btn-primary btn-lg btn-block" onclick="rollDices()">Roll</button></div>
+		</div>
+
+		<div class="row top-buffer">
+			<div class="col-xs-12"><span id="total" class="label label-info"></span></div>
+		</div>
+
+		<div class="row top-buffer">
+			<div class="col-xs-1"><span id="quantity" class="label label-default">0</span></div>
+			<div class="col-xs-2"><img src="img/d6.png" width="60" height="60" id="selectedDice"></div>
+			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(-5)">-5</button></div>
+			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(-1)">-1</button></div>
+			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(1)">+1</button></div>
+			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(5)">+5</button></div>
+		</div>
+
+		<div class="row top-buffer">
 			<div class="col-md-3 col-xs-3"><img src="img/d2.png" width="60" height="60" onclick="selectDice(2)"><br> D2 </div>
 			<div class="col-md-3 col-xs-3"><img src="img/d4.png" width="60" height="60" onclick="selectDice(4)"><br> D4 </div>
 			<div class="col-md-3 col-xs-3"><img src="img/d6.png" width="60" height="60" onclick="selectDice(6)"><br> D6 </div>
@@ -36,35 +54,13 @@
 			<div class="col-xs-3"><img src="img/d100.png" width="60" height="60" onclick="selectDice(100)"><br> D100 </div>
 		</div>
 
-		<div class="row top-buffer">
-			<div class="col-xs-2"><img src="img/d6.png" width="60" height="60" id="selectedDice"></div>
-			<div class="col-xs-1"><span id="quantity" class="label label-default">0</span></div>
-			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(-5)">-5</button></div>
-			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(-1)">-1</button></div>
-			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(1)">+1</button></div>
-			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(5)">+5</button></div>
-		</div>
-
-		<div class="row top-buffer">
-			<div class="col-xs-6"><button type="button" class="btn btn-danger btn-lg btn-block" onclick="clearDices()">Clear</button></div>
-			<div class="col-xs-6"><button type="button" class="btn btn-primary btn-lg btn-block" onclick="rollDices()">Roll</button></div>
-		</div>
-
-		<div class="row top-buffer">
-			<div class="col-xs-12"><span id="result"></span></div>
-		</div>
-
-		<div class="row top-buffer">
-			<div class="col-xs-12"><span id="total" class="label label-info"></span></div>
-		</div>
 	</div>
 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+	<script src="js/vendor/bootstrap.min.js"></script>
 
-		<script src="js/vendor/bootstrap.min.js"></script>
-
-		<script src="js/main.js"></script>
+	<script src="js/main.js"></script>
 	</body>
 </html>

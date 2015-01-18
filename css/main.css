@@ -1,2 +1,11 @@
 .top-buffer { margin-top:20px; }
+
 div.row > div { text-align: center; }
+
+.cell-result { margin-top: 10px; }
+#result { font-size: 14pt; }
+.row-total { height: 31px; }
+#total { font-size: 14pt; }
+
+.cell-quantity { margin-top: 15px; }
+#quantity { font-size: 12pt; }

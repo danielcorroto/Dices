@@ -1,5 +1,5 @@
 var selected = 6;
-var quantity = 0;
+var quantity = 1;
 
 function selectDice(dice) {
 	selected = dice;
@@ -9,13 +9,6 @@ function selectDice(dice) {
 function printDiceQty() {
 	var span = $("#quantity");
 	span.text(quantity);
-	if (quantity == 0) {
-		span.removeClass("label-success");
-		span.addClass("label-default");
-	} else {
-		span.removeClass("label-default");
-		span.addClass("label-success");
-	}
 }
 
 function addDice(value) {

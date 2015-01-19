@@ -27,6 +27,8 @@ function clearDices() {
 }
 
 function rollDices() {
+	$("#roll_audio").get(0).play();
+
 	var res = [];
 	if (selected == 2) {
 		for (var i=0; i<quantity; i++) {
@@ -39,16 +41,20 @@ function rollDices() {
 		var total = 0;
 		for (var i=0; i<quantity; i++) {
 			var value = Math.floor(Math.random() * selected);
-			if (selected != 100) { value += 1; }
+			if (selected != 10) { value += 1; }
 			res.push(value);
 			total += value;
 		}
 		if (res.length > 0) {
 			$("#total").text("Total: " + total);
+			$("#total").hide();
+			$("#total").fadeIn("slow");
 		}
 	}
 	if (res.length > 0) {
 		$("#result").text("Roll: " + res);
+		$("#result").hide();
+		$("#result").fadeIn("slow");
 	}
 }
 

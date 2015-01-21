@@ -4,11 +4,11 @@ var quantity = 1;
 function selectDice(dice) {
 	selected = dice;
 	$("#selectedDice").attr("src", "img/d"+dice+".png");
+	$("#selectedDice").attr("alt", "D"+dice);
 }
 
 function selectOneDice(dice) {
-	selected = dice;
-	$("#selectedDice").attr("src", "img/d"+dice+".png");
+	selectDice(dice);
 	$("#onedice-selector").slideUp();
 	$("#onedice-quantity").slideDown();
 }

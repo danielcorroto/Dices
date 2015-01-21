@@ -62,3 +62,6 @@ function rollDices() {
 	$("#result").fadeIn("slow");
 }
 
+function rollOneDice() {
+	rollDices();
+}

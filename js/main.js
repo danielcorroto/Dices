@@ -6,6 +6,13 @@ function selectDice(dice) {
 	$("#selectedDice").attr("src", "img/d"+dice+".png");
 }
 
+function selectOneDice(dice) {
+	selected = dice;
+	$("#selectedDice").attr("src", "img/d"+dice+".png");
+	$("#onedice-selector").slideUp();
+	$("#onedice-quantity").slideDown();
+}
+
 function printDiceQty() {
 	var span = $("#quantity");
 	span.text(quantity);

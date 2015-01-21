@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Dice roller</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/ico" href="favicon.ico">
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<style>
+			body {
+				padding-top: 50px;
+				padding-bottom: 20px;
+			}
+		</style>
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/main.css">
+
+		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	</head>
+	<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Dices</a>
+		    </div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">All dices</a></li>
+					<li><a href="onedice.html">One dice</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="onedice-selector" class="panel panel-primary">
+		<div class="panel-heading">Choose a dice</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-3 col-xs-3"><img src="img/d2.png" width="60" height="60" onclick="selectOneDice(2)"><br> D2 </div>
+				<div class="col-md-3 col-xs-3"><img src="img/d4.png" width="60" height="60" onclick="selectOneDice(4)"><br> D4 </div>
+				<div class="col-md-3 col-xs-3"><img src="img/d6.png" width="60" height="60" onclick="selectOneDice(6)"><br> D6 </div>
+				<div class="col-md-3 col-xs-3"><img src="img/d8.png" width="60" height="60" onclick="selectOneDice(8)"><br> D8 </div>
+			</div>
+			<div class="row top-buffer">
+				<div class="col-xs-3"><img src="img/d10.png" width="60" height="60" onclick="selectOneDice(10)"><br> D10 </div>
+				<div class="col-xs-3"><img src="img/d12.png" width="60" height="60" onclick="selectOneDice(12)"><br> D12 </div>
+				<div class="col-xs-3"><img src="img/d20.png" width="60" height="60" onclick="selectOneDice(20)"><br> D20 </div>
+				<div class="col-xs-3"><img src="img/d100.png" width="60" height="60" onclick="selectOneDice(100)"><br> D100 </div>
+			</div>
+		</div>
+	</div>
+
+	<div id="onedice-quantity" class="container top-buffer" style="display: none">
+		<div class="row">
+			<div class="col-xs-9 cell-result"><span id="result"></span></div>
+			<div class="col-xs-3"><button type="button" class="btn btn-primary btn-lg btn-block" onclick="rollDices()">Roll</button></div>
+		</div>
+
+		<div class="row top-buffer row-total">
+			<div class="col-xs-12"><span id="total" class="label label-info"></span></div>
+		</div>
+
+		<div class="row top-buffer">
+			<div class="col-xs-1 cell-quantity"><span id="quantity" class="label label-success">1</span></div>
+			<div class="col-xs-2"><img src="img/d6.png" width="60" height="60" id="selectedDice"></div>
+			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(-5)">-5</button></div>
+			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(-1)">-1</button></div>
+			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(1)">+1</button></div>
+			<div class="col-xs-2"><button type="button" class="btn btn-default btn-lg" onclick="addDice(5)">+5</button></div>
+		</div>
+
+	</div>
+
+	<audio src="audio/roll.mp3" id="roll_audio"></audio>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+
+	<script src="js/vendor/bootstrap.min.js"></script>
+
+	<script src="js/main.js"></script>
+	</body>
+</html>

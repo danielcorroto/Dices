@@ -20,14 +20,14 @@ function printDiceQty() {
 
 function addDice(value) {
 	quantity += value;
-	if (quantity < 0) {
-		quantity = 0;
+	if (quantity < 1) {
+		quantity = 1;
 	}
 	printDiceQty();
 }
 
 function clearDices() {
-	quantity = 0;
+	quantity = 1;
 	printDiceQty();
 	$("#result").text("");
 	$("#total").text("");
@@ -53,16 +53,12 @@ function rollDices() {
 			res.push(value);
 			total += value;
 		}
-		if (res.length > 0) {
-			$("#total").text("Total: " + total);
-			$("#total").hide();
-			$("#total").fadeIn("slow");
-		}
+		$("#total").text("Total: " + total);
+		$("#total").hide();
+		$("#total").fadeIn("slow");
 	}
-	if (res.length > 0) {
-		$("#result").text("Roll: " + res);
-		$("#result").hide();
-		$("#result").fadeIn("slow");
-	}
+	$("#result").text("Roll: " + res);
+	$("#result").hide();
+	$("#result").fadeIn("slow");
 }
 

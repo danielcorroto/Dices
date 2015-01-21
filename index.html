@@ -21,8 +21,27 @@
 		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
 	<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Dices</a>
+		    </div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">All dices</a></li>
+					<li><a href="onedice.html">One dice</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-	<div class="container">
+	<div class="container top-buffer">
 		<div class="row">
 			<div class="col-xs-9 cell-result"><span id="result"></span></div>
 			<div class="col-xs-3"><button type="button" class="btn btn-primary btn-lg btn-block" onclick="rollDices()">Roll</button></div>

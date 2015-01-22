@@ -34,7 +34,9 @@ function clearDices() {
 }
 
 function rollDices() {
-	$("#roll_audio").get(0).play();
+	var audio = $("#roll_audio").get(0);
+	audio.load();
+	audio.play();
 
 	var res = [];
 	if (selected == 2) {

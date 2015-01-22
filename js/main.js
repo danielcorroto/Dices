@@ -59,7 +59,12 @@ function rollDices() {
 		$("#total").hide();
 		$("#total").fadeIn("slow");
 	}
-	$("#result").text("Roll: " + res);
+
+	var results = "";
+	for (i=0; i<res.length; i++) {
+		results += res[i] + ", ";
+	}
+	$("#result").text("Roll: " + results.substring(0,results.length-2));
 	$("#result").hide();
 	$("#result").fadeIn("slow");
 	return res;

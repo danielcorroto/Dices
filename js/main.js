@@ -60,8 +60,21 @@ function rollDices() {
 	$("#result").text("Roll: " + res);
 	$("#result").hide();
 	$("#result").fadeIn("slow");
+	return res;
 }
 
 function rollOneDice() {
-	rollDices();
+	var a = rollDices();
+	var d = {};
+	for (i=0; i<a.length; i++) {
+		if (d[a[i]] == undefined) {
+			d[a[i]] = 1;
+		} else {
+			d[a[i]]++;
+		}
+	}
+	$("#report").empty();
+	for (var key in d) {
+		$("#report").append('<tr><td><span class="label label-primary">'+key+'</span></td><td>'+d[key]+'</td></tr>');
+	}
 }

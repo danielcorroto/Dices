@@ -1,6 +1,8 @@
 var selected = 6;
 var quantity = 1;
 
+const DELAY = 400;
+
 function selectDice(dice) {
 	selected = dice;
 	$("#selectedDice").attr("src", "img/d"+dice+".png");
@@ -38,6 +40,8 @@ function rollDices() {
 	audio.load();
 	audio.play();
 
+	$("#result").hide().delay(DELAY);
+	$("#total").hide().delay(DELAY);
 	var res = [];
 	if (selected == 2) {
 		for (var i=0; i<quantity; i++) {
@@ -46,7 +50,6 @@ function rollDices() {
 			else { res.push("CRUZ"); }
 		}
 		$("#total").text("");
-		$("#total").hide();
 	} else {
 		var total = 0;
 		for (var i=0; i<quantity; i++) {
@@ -56,7 +59,6 @@ function rollDices() {
 			total += value;
 		}
 		$("#total").text("Total: " + total);
-		$("#total").hide();
 		$("#total").fadeIn("slow");
 	}
 
@@ -64,8 +66,9 @@ function rollDices() {
 	for (i=0; i<res.length; i++) {
 		results += res[i] + ", ";
 	}
+
+
 	$("#result").text("Roll: " + results.substring(0,results.length-2));
-	$("#result").hide();
 	$("#result").fadeIn("slow");
 	return res;
 }
@@ -80,8 +83,10 @@ function rollOneDice() {
 			d[a[i]]++;
 		}
 	}
+	$("#report").hide().delay(DELAY);
 	$("#report").empty();
 	for (var key in d) {
 		$("#report").append('<tr><td><span class="label label-primary">'+key+'</span></td><td>'+d[key]+'</td></tr>');
+		$("#report").fadeIn("slow");
 	}
 }
